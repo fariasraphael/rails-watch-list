@@ -1,12 +1,22 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
   <div class="container">
-    <h1><strong><%= @list.name %></strong></h1>
+    <h1>Save any kind of <strong>Movies</strong></h1>
+    <p>Create your own movie bookmark.</p>
   </div>
 </div>
 
 <div class="container">
   <div class="d-flex justify-content-between align-self-center my-3">
-    <h1>Movies</h1>
-    <%= link_to "Add new movie", new_list_path, class: "btn btn-primary rounded-3 fw-bold align-self-center p-2 m-0" %>
+    <h1>My Lists</h1>
+    <%= link_to "Add new bookmark", new_list_bookmark_path(@list), class: "btn btn-primary rounded-3 fw-bold align-self-center p-2 m-0" %>
+  </div>
+
+  <div class="grid-container-show">
+    <% @list.movies.each do |movie| %>
+       <div class="d-flex align-self-center" style="background-image: url(<%=movie.poster_url%>) ">
+        <h2 ><%= movie.title %></h2>
+      </div>
+
+    <% end %>
   </div>
 </div>

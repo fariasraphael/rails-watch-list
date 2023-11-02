@@ -1,0 +1,34 @@
+.grid-container-show{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 10px;
+}
+
+.grid-container-show div {
+background-size: cover;
+background-position: center;
+justify-content: center;
+align-items: center;
+font-weight: bold;
+border-radius: 5px;
+box-shadow: 0 0 15px rgba(0,0,0,0.2);
+height: 250px;
+width: 100%;
+object-fit: cover;
+}
+
+
+.grid-container-show h2 {
+  padding: 20px 0;
+  margin-left: 8px;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.685);
+  color: rgb(245, 245, 220);
+}
+
+.grid-container-show img {
+  border-radius: 5px;
+  object-fit: cover;
+}
